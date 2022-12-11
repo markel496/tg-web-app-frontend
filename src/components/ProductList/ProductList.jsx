@@ -89,7 +89,7 @@ const ProductList = () => {
       queryId
     }
 
-    fetch('https://tg-web-app-backend-markel496.vercel.app/web-data', {
+    fetch(`${process.env.REACT_APP_API_URL}/web-data`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json' //Отправляю данные в формате JSON
