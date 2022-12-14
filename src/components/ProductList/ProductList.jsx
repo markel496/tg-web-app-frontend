@@ -3,6 +3,8 @@ import './ProductList.css'
 import ProductItem from '../ProductItem/ProductItem'
 import { useTelegram } from '../../hooks/useTelegram'
 
+const REACT_APP_API_URL = 'https://318c-31-134-188-155.eu.ngrok.io'
+
 const products = [
   {
     id: '1',
@@ -89,7 +91,7 @@ const ProductList = () => {
       queryId
     }
 
-    fetch(`${process.env.REACT_APP_API_URL}/web-data`, {
+    fetch(`${REACT_APP_API_URL}/web-data`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json' //Отправляю данные в формате JSON
